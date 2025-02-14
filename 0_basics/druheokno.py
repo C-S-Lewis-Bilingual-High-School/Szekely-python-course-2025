@@ -3,12 +3,14 @@ w = tkinter.Tk()
 p = tkinter.Canvas()
 p.pack()
 
-x = random.randint(10,500) #zaciatocna vodorovna suradnica
-y = random.randint(10,300) #zaciatocna zvisla suradnica
-
-p.create_rectangle(x, y, x + 50, y + 50, fill="red") #hlavny
-p.create_rectangle(x + 20,y + 10, x + 30, y + 40, fill ="white", outline="white") #zvisly
-p.create_rectangle(x + 10 ,y + 20, x + 40, y + 30, fill="white", outline="white") #vodorovny
+for i in range(10):
+    x = random.randint(10,500) #zaciatocna vodorovna suradnica
+    y = random.randint(10,300) #zaciatocna zvisla suradnica
+    v = random.randint(5,10) #velkost stvorceka v rastri
+    print(i)
+    p.create_rectangle(x, y, x + 5 * v, y + 5 * v, fill="red") #hlavny
+    p.create_rectangle(x + 2 * v,y + 1 * v, x + 3 * v, y + 4 * v, fill ="white", outline="white") #zvisly
+    p.create_rectangle(x + 1 * v ,y + 2 * v, x + 4 * v, y + 3 * v, fill="white", outline="white") #vodorovny
 
 
 """
